@@ -52,57 +52,274 @@ class _MyHomePageState extends State<MyHomePage> {
             pw.Center(
            child: pw.Text("تقرير للفترة من .... الى.....",style:pw.TextStyle(fontWeight: pw.FontWeight.bold,fontSize: 20,color: PdfColor.fromHex("#0000CD")),
              ),),
-            pw.Row(children:[
-              pw.Expanded(
-                  flex: 2,
-                  child: pw.Container(
-                      padding: pw.EdgeInsets.all(4),
-                      margin: pw.EdgeInsets.only(left: 15,),
-                      child: pw.Column(
-                          crossAxisAlignment: pw.CrossAxisAlignment.start,
-                          mainAxisAlignment: pw.MainAxisAlignment.center,
+            pw.SizedBox(height: 20),
+              pw.Table(
+                  border: pw.TableBorder.all(
+                      color: PdfColor.fromHex("#000000")),//607D8BFF
+                  children:
+                  [
+                    pw.TableRow(
+                        decoration:pw.BoxDecoration(color:PdfColor.fromHex("#607D8BFF"),borderRadius: pw.BorderRadius.circular(4)),
+                        children: [
+                          pw.Padding(
+                              padding: pw.EdgeInsets.all(4),
+                              child: pw.Column(
+                                  crossAxisAlignment: pw.CrossAxisAlignment.center,
+                                  mainAxisAlignment: pw.MainAxisAlignment.center,
+                                  children: [
+                                    pw.Text("الاجمالي", style: pw.TextStyle(color:PdfColor.fromHex("#E0FFFF"),fontSize: 8, fontWeight: pw.FontWeight.bold)),
+                                  ])),
+                          pw.Padding(
+                              padding: pw.EdgeInsets.all(4),
+                              child: pw.Column(
+                                  crossAxisAlignment: pw.CrossAxisAlignment.center,
+                                  mainAxisAlignment: pw.MainAxisAlignment.center,
+                                  children: [
+                                    pw.Text("العدد", style: pw.TextStyle(color:PdfColor.fromHex("#E0FFFF"),fontSize: 8, fontWeight: pw.FontWeight.bold)),
+                                  ])),
+                          pw.Container(
+                            padding: pw.EdgeInsets.all(4),
+                            width: 20,
+                            child: pw.Column(
+                                crossAxisAlignment: pw.CrossAxisAlignment.center,
+                                mainAxisAlignment: pw.MainAxisAlignment.center,
+                                children: [
+                                  pw.Text("ألأسم", style: pw.TextStyle(color:PdfColor.fromHex("#E0FFFF"),fontSize: 8, fontWeight: pw.FontWeight.bold)),
+                                ]
+                            ))]),
+                      pw.TableRow(
                           children: [
-                              pw.Row(
-                                  children:[
-                                    pw.Text("عــدد الايام الماجرة: ", style: pw.TextStyle(fontSize: 9,fontWeight: pw.FontWeight.bold)),
-                                  ]),
-                              pw.Row(
-                                  children:[
-                                    pw.Text("عــدد الحجوزات الجديدة: ", style: pw.TextStyle(fontSize: 9,fontWeight: pw.FontWeight.bold)),
-                                  ]),
-                            pw.Text("أجمالي ألايجارات : ", style: pw.TextStyle(fontSize: 9,fontWeight: pw.FontWeight.bold)),
-                            pw.Text("أجمالي الحجوزات :", style: pw.TextStyle(fontSize: 9,fontWeight: pw.FontWeight.bold)),
-                            // pw.Divider(thickness: 1)
-                          ]))),
-              pw.Expanded(
-                  flex: 2,
-                  child: pw.Container(
-                      padding: pw.EdgeInsets.all(4),
-                      margin: pw.EdgeInsets.only(bottom: 12),
-                      child: pw.Column(
-                          crossAxisAlignment: pw.CrossAxisAlignment.center,
-                          // mainAxisAlignment: pw.MainAxisAlignment.center,
+                            pw.Padding(
+                                padding: pw.EdgeInsets.all(4),
+                                child: pw.Column(
+                                    crossAxisAlignment: pw.CrossAxisAlignment.center,
+                                    mainAxisAlignment: pw.MainAxisAlignment.center,
+                                    children: [
+                                      pw.Text("", style: pw.TextStyle(fontSize: 6,)),
+                                    ])),
+                            pw.Padding(
+                                padding: pw.EdgeInsets.all(4),
+                                child: pw.Column(
+                                    crossAxisAlignment: pw.CrossAxisAlignment.center,
+                                    mainAxisAlignment: pw.MainAxisAlignment.center,
+                                    children: [
+                                      pw.Text("", style: pw.TextStyle(fontSize: 6,)),
+                                    ])),
+                            pw.Padding(
+                                padding: pw.EdgeInsets.all(4),
+                                child: pw.Column(
+                                    crossAxisAlignment: pw.CrossAxisAlignment.center,
+                                    mainAxisAlignment: pw.MainAxisAlignment.center,
+                                    children: [
+                                      pw.Text("حجوزات", style: pw.TextStyle(fontSize: 8, fontWeight: pw.FontWeight.bold)),
+                                    ]))]),
+                    pw.TableRow(
                           children: [
-                            pw.Text("المبلغ المحصلة : ", style: pw.TextStyle(fontSize: 9,fontWeight: pw.FontWeight.bold)),
-                            pw.Text("المبالغ المتبقي  :", style: pw.TextStyle(fontSize: 9,fontWeight: pw.FontWeight.bold)),
-                            pw.Text("اجمالي صافي ألايرادات المتوقع:  ", style: pw.TextStyle(fontSize: 9,fontWeight: pw.FontWeight.bold)),
-                          ]))),
-              pw.Expanded(
-                  flex: 2,
-                  child: pw.Container(
-                      padding: pw.EdgeInsets.all(4),
-                      margin: pw.EdgeInsets.only(bottom: 12),
-                      child: pw.Column(
-                          crossAxisAlignment: pw.CrossAxisAlignment.center,
-                          // mainAxisAlignment: pw.MainAxisAlignment.center,
+                            pw.Padding(
+                                padding: pw.EdgeInsets.all(4),
+                                child: pw.Column(
+                                    crossAxisAlignment: pw.CrossAxisAlignment.center,
+                                    mainAxisAlignment: pw.MainAxisAlignment.center,
+                                    children: [
+                                      pw.Text("", style: pw.TextStyle(fontSize: 6,)),
+                                    ])),
+                            pw.Padding(
+                                padding: pw.EdgeInsets.all(4),
+                                child: pw.Column(
+                                    crossAxisAlignment: pw.CrossAxisAlignment.center,
+                                    mainAxisAlignment: pw.MainAxisAlignment.center,
+                                    children: [
+                                      pw.Text("", style: pw.TextStyle(fontSize: 6,)),
+                                    ])),
+                            pw.Padding(
+                                padding: pw.EdgeInsets.all(4),
+                                child: pw.Column(
+                                    crossAxisAlignment: pw.CrossAxisAlignment.center,
+                                    mainAxisAlignment: pw.MainAxisAlignment.center,
+                                    children: [
+                                      pw.Text("أيجارات", style: pw.TextStyle(fontSize: 8, fontWeight: pw.FontWeight.bold)),
+                                    ]))]),
+                  ]),
+            pw.Table(
+                border: pw.TableBorder.all(color: PdfColor.fromHex("#000000")),
+              children:[
+                pw.TableRow(
+                    // decoration: pw.BoxDecoration(border:pw.Border.symmetric(horizontal: pw.BorderSide(color: PdfColors.black,width: 1.0,style: pw.BorderStyle.solid)) ),
+                    children: [
+                      pw.Container(
+                          // color:PdfColor.fromHex("#E0FFFF"),
+                        width: 30,
+                          padding: pw.EdgeInsets.all(4),
+                          child: pw.Column(
+                              crossAxisAlignment: pw.CrossAxisAlignment.center,
+                              mainAxisAlignment: pw.MainAxisAlignment.center,
+                              children: [
+                                pw.Text(" ", style: pw.TextStyle(fontSize: 6,fontWeight: pw.FontWeight.bold)),
+                              ])),
+                      pw.Padding(
+                          padding: pw.EdgeInsets.all(4),
+                          child: pw.Column(
+                              crossAxisAlignment: pw.CrossAxisAlignment.center,
+                              mainAxisAlignment: pw.MainAxisAlignment.center,
+                              children: [
+                                pw.Text("الاجمالي",style: pw.TextStyle(fontSize: 8,fontWeight:pw.FontWeight.bold)),
+                              ]))])
+                        ]),
+            // pw.Center(
+            //   child: pw.Text("جدول الحجوزات (ألأيجارات لشهر...)",style:pw.TextStyle(fontWeight: pw.FontWeight.bold,fontSize: 13,),
+            //   ),),
+            pw.SizedBox(height: 20),
+              pw.Table(
+                  border: pw.TableBorder.all(
+                      color: PdfColor.fromHex("#000000")),//607D8BFF
+                  children:
+                  [
+                    pw.TableRow(
+                        decoration:pw.BoxDecoration(color:PdfColor.fromHex("#607D8BFF"),borderRadius: pw.BorderRadius.circular(4)),
+                        children: [
+                          pw.Container(
+                            width: 70,
+                              padding: pw.EdgeInsets.all(4),
+                              child: pw.Column(
+                                  crossAxisAlignment: pw.CrossAxisAlignment.center,
+                                  mainAxisAlignment: pw.MainAxisAlignment.center,
+                                  children: [
+                                    pw.Text("الاجمالي", style: pw.TextStyle(color:PdfColor.fromHex("#E0FFFF"),fontSize: 8, fontWeight: pw.FontWeight.bold)),
+                                  ])),
+                          pw.Container(
+                            padding: pw.EdgeInsets.all(4),
+                            // width: 50,
+                            child: pw.Column(
+                                crossAxisAlignment: pw.CrossAxisAlignment.center,
+                                mainAxisAlignment: pw.MainAxisAlignment.center,
+                                children: [
+                                  pw.Text("ألأسم", style: pw.TextStyle(color:PdfColor.fromHex("#E0FFFF"),fontSize: 8, fontWeight: pw.FontWeight.bold)),
+                                ]
+                            ),
+                          ),
+                        ]),
+                      pw.TableRow(
                           children: [
-                            pw.Text("اجمالي المصروفات  : ", style: pw.TextStyle(fontSize: 9,fontWeight: pw.FontWeight.bold)),
-                            pw.Text("المصروفات المتوقع  :", style: pw.TextStyle(fontSize: 9,fontWeight: pw.FontWeight.bold)),
-                          ]))),
-            ]),
+                            pw.Padding(
+                                padding: pw.EdgeInsets.all(4),
+                                child: pw.Column(
+                                    crossAxisAlignment: pw.CrossAxisAlignment.center,
+                                    mainAxisAlignment: pw.MainAxisAlignment.center,
+                                    children: [
+                                      pw.Text("", style: pw.TextStyle(fontSize: 6,)),
+                                    ])),
+                            pw.Padding(
+                                padding: pw.EdgeInsets.all(4),
+                                child: pw.Column(
+                                    crossAxisAlignment: pw.CrossAxisAlignment.center,
+                                    mainAxisAlignment: pw.MainAxisAlignment.center,
+                                    children: [
+                                      pw.Text("الايرادات", style: pw.TextStyle(fontSize: 8, fontWeight: pw.FontWeight.bold)),
+                                    ]))]),
+                    pw.TableRow(
+                          children: [
+                            pw.Padding(
+                                padding: pw.EdgeInsets.all(4),
+                                child: pw.Column(
+                                    crossAxisAlignment: pw.CrossAxisAlignment.center,
+                                    mainAxisAlignment: pw.MainAxisAlignment.center,
+                                    children: [
+                                      pw.Text("", style: pw.TextStyle(fontSize: 6,)),
+                                    ])),
+                            pw.Padding(
+                                padding: pw.EdgeInsets.all(4),
+                                child: pw.Column(
+                                    crossAxisAlignment: pw.CrossAxisAlignment.center,
+                                    mainAxisAlignment: pw.MainAxisAlignment.center,
+                                    children: [
+                                      pw.Text("المصروفات", style: pw.TextStyle(fontSize: 8, fontWeight: pw.FontWeight.bold)),
+                                    ]))]),
+                    pw.TableRow(
+                        decoration: pw.BoxDecoration(border:pw.Border.symmetric(horizontal: pw.BorderSide(color: PdfColors.black,width: 1.0,style: pw.BorderStyle.solid)) ),
+                        children: [
+                          pw.Padding(
+                              padding: pw.EdgeInsets.all(4),
+                              child: pw.Column(
+                                  crossAxisAlignment: pw.CrossAxisAlignment.center,
+                                  mainAxisAlignment: pw.MainAxisAlignment.center,
+                                  children: [
+                                    pw.Text(" ", style: pw.TextStyle(fontSize: 6,fontWeight: pw.FontWeight.bold)),
+                                  ])),
+                          pw.Padding(
+                              padding: pw.EdgeInsets.all(4),
+                              child: pw.Column(
+                                  crossAxisAlignment: pw.CrossAxisAlignment.center,
+                                  mainAxisAlignment: pw.MainAxisAlignment.center,
+                                  children: [
+                                    pw.Text("الصافي المتبقي",style: pw.TextStyle(fontSize: 8,fontWeight: pw.FontWeight.bold)),
+                                  ]))])]),
+            pw.SizedBox(height: 20),
+              pw.Table(
+                  border: pw.TableBorder.all(
+                      color: PdfColor.fromHex("#000000")),//607D8BFF
+                  children:
+                  [
+                    pw.TableRow(
+                        decoration:pw.BoxDecoration(color:PdfColor.fromHex("#607D8BFF"),borderRadius: pw.BorderRadius.circular(4)),
+                        children: [
+                          pw.Container(
+                            // width: 70,
+                              padding: pw.EdgeInsets.all(4),
+                              child: pw.Column(
+                                  crossAxisAlignment: pw.CrossAxisAlignment.center,
+                                  mainAxisAlignment: pw.MainAxisAlignment.center,
+                                  children: [
+                                    pw.Text("أجمالي صافي ألايرادات المتوقع", style: pw.TextStyle(color:PdfColor.fromHex("#E0FFFF"),fontSize: 8, fontWeight: pw.FontWeight.bold)),
+                                  ])),
+                          pw.Container(
+                            padding: pw.EdgeInsets.all(4),
+                            // width: 50,
+                            child: pw.Column(
+                                crossAxisAlignment: pw.CrossAxisAlignment.center,
+                                mainAxisAlignment: pw.MainAxisAlignment.center,
+                                children: [
+                                  pw.Text("أجمالي المصروفات المتوقعة", style: pw.TextStyle(color:PdfColor.fromHex("#E0FFFF"),fontSize: 8, fontWeight: pw.FontWeight.bold)),
+                                ])),
+                          pw.Container(
+                            padding: pw.EdgeInsets.all(4),
+                            // width: 50,
+                            child: pw.Column(
+                                crossAxisAlignment: pw.CrossAxisAlignment.center,
+                                mainAxisAlignment: pw.MainAxisAlignment.center,
+                                children: [
+                                  pw.Text("أجمالي الأيرادات", style: pw.TextStyle(color:PdfColor.fromHex("#E0FFFF"),fontSize: 8, fontWeight: pw.FontWeight.bold)),
+                                ])),
+                        ]),
+                      pw.TableRow(
+                          children: [
+                            pw.Padding(
+                                padding: pw.EdgeInsets.all(4),
+                                child: pw.Column(
+                                    crossAxisAlignment: pw.CrossAxisAlignment.center,
+                                    mainAxisAlignment: pw.MainAxisAlignment.center,
+                                    children: [
+                                      pw.Text("", style: pw.TextStyle(fontSize: 6,)),
+                                    ])),
+                            pw.Padding(
+                                padding: pw.EdgeInsets.all(4),
+                                child: pw.Column(
+                                    crossAxisAlignment: pw.CrossAxisAlignment.center,
+                                    mainAxisAlignment: pw.MainAxisAlignment.center,
+                                    children: [
+                                      pw.Text("", style: pw.TextStyle(fontSize: 6,)),
+                                    ])),
+                            pw.Padding(
+                                padding: pw.EdgeInsets.all(4),
+                                child: pw.Column(
+                                    crossAxisAlignment: pw.CrossAxisAlignment.center,
+                                    mainAxisAlignment: pw.MainAxisAlignment.center,
+                                    children: [
+                                      pw.Text("", style: pw.TextStyle(fontSize: 8, fontWeight: pw.FontWeight.bold)),
+                                    ]))]),
+                  ]),
             pw.Center(
               child: pw.Text("جدول الحجوزات (ألأيجارات لشهر...)",style:pw.TextStyle(fontWeight: pw.FontWeight.bold,fontSize: 13,),
-              ),),
+              )),
               pw.Table(
                   border: pw.TableBorder.all(
                       color: PdfColor.fromHex("#000000")),//607D8BFF
@@ -118,7 +335,6 @@ class _MyHomePageState extends State<MyHomePage> {
                                   mainAxisAlignment: pw.MainAxisAlignment.center,
                                   children: [
                                     pw.Text("المتبقي", style: pw.TextStyle(color:PdfColor.fromHex("#E0FFFF"),fontSize: 8, fontWeight: pw.FontWeight.bold)),
-                                    // pw.Divider(thickness: 1)
                                   ])),
                           pw.Container(
                               padding: pw.EdgeInsets.all(4),
